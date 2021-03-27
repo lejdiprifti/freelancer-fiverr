@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Home - Freelance Pro</title>
      <%@include file ="header.jsp"%>
     <link href="style/newcss.css" rel="stylesheet" type="text/css"/>
 

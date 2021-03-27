@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sign in</title>
+        <title>Sign in - Freelance Pro</title>
         <%@include file ="header.jsp"%>
         <link href="style/signin.css" rel="stylesheet" type="text/css"/>
     </head>

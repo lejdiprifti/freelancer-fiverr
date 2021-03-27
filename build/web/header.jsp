@@ -22,10 +22,10 @@
 <div id="navbar" class="w3-bar w3-border sticky-top">
   <a href="index.jsp" class="w3-hover-light-orange w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
   <a href="requestsubject.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fa fa-pen"></i> Request a new content/subject</a>
-  <a href="video.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-photo-video"></i> submit a video</a>
-  <a href="payment.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-money-check"></i> payment </a>
-  <a href="#" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-file-video"></i> videos</a>
-<a href="ApprovalForm.php" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-file-video"></i> approval</a>
+  <a href="video.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-photo-video"></i> Submit a video</a>
+  <a href="payment.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-money-check"></i> Payment </a>
+  <a href="#" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-file-video"></i> Videos</a>
+<a href="ApprovalForm.php" class="w3-hover-light-green w3-bar-item w3-button"><i class="fas fa-file-video"></i> Approval</a>
   <a href="signin.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fa fa-sign-in-alt"></i> Sign In</a>
-  <a href="signup.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fa fa-sign-in-alt"></i> Sign UP</a>
+  <a href="signup.jsp" class="w3-hover-light-green w3-bar-item w3-button"><i class="fa fa-sign-in-alt"></i> Sign Up</a>
 </div> 

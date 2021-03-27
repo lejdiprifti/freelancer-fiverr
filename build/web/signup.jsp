@@ -12,7 +12,7 @@
         <%@include file ="header.jsp"%>
         <link href="style/formstyle.css" rel="stylesheet" type="text/css"/>
         <script src="js/signup.js" type="text/javascript"></script>
-        <title>Freelance Pro</title>
+        <title>Sign up - Freelance Pro</title>
     </head>
     <body>
         <div id="title">
