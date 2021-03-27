@@ -17,7 +17,7 @@
     <body>
         <div id="title">
             <h1>Welcome to <strong>Freelance Pro!</strong></h1> 
-            <span class="badge bg-primary">The first of its kind, all in one collaborative learning platform.</span>
+            <span class="badge bg-success">The first of its kind, all in one collaborative learning platform.</span>
         </div>
         <br><br/>
 <div id="signup">
@@ -66,7 +66,7 @@
                         </tr>
                     </tbody>   
                 </table>
-                <button type="button" class="btn btn-primary" onclick="submit()">Submit</button>
+                <button type="button" class="btn btn-success" onclick="submit()">Submit</button>
 </div>
     </body>
 </html>
