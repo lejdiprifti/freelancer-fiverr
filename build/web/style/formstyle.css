@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body{
-    background-image: linear-gradient(#3DED97, #F64A8A, #FCA3B7,#324F1E);
+   
 }
 td{
     color:#324F1E;
@@ -46,4 +46,29 @@ h1{
 div#title {
    width: 100%;
    text-align: center;
+}
+
+div#signup table {
+    width: 100%;
+}
+div#signup {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div#signup td {
+    margin-left: 10%;
+}
+
+div#signup button {
+    margin-top: 3%;
+    float: right;
+}
+
+#securityQuestion {
+    margin-top: 5%;
+}
+
+#securityAnswer {
+    margin-top: 2%;
 }

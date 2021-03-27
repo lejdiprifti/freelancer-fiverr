@@ -20,8 +20,8 @@
             <span class="badge bg-primary">The first of its kind, all in one collaborative learning platform.</span>
         </div>
         <br><br/>
-
-        <h6> To Register as a New Customer, Please fill out the forms Below: </h6>
+<div id="signup">
+        <h6> To register as a new customer, please fill out the form below: </h6>
                 <table border="0">
                     <tbody>
                         <tr>
@@ -46,15 +46,27 @@
                         </tr>
                         <tr>
                             <td>
-                                    <label>Select a User Type:</label>
-                                    <select class="form-select" id="userType" name="subject_id">
+                                 Select a User Type:
+                            </td>
+                            <td>
+                                    <select class="form-select" id="userType">
                                         <option>learner</option>
                                         <option>expert</option>
                                     </select>
-                            <td>
+                            </td>
+                        </tr>
+                        <tr id="securityRow">
+                            <td>Select a security question:</td>
+                            <td><select class="form-select" id="securityQuestion">
+                                        <option>What's your pet's name?</option>
+                                        <option>Where did your parents meet?</option>
+                                </select>
+                                <input id="securityAnswer" type="text" class="form-control"/>
+                            </td>
                         </tr>
                     </tbody>   
                 </table>
                 <button type="button" class="btn btn-primary" onclick="submit()">Submit</button>
+</div>
     </body>
 </html>

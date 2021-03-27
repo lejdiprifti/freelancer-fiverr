@@ -8,8 +8,7 @@
 function passvalid() {
    var pwd = document.getElementById("pwd").value;
   var cpwd = document.getElementById("cpwd").value;
-  if (pwd !== cpwd)
-  {
+  if (pwd !== cpwd){
     document.getElementById("cpwd").setCustomValidity("Passwords do not match");
     return false;
   } else {
@@ -26,7 +25,6 @@ function redirectToPayment() {
         location.href = "index.jsp";
     }
 }
-
 
 function submit() {
     if (passvalid() === true) {

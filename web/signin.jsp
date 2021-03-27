@@ -9,40 +9,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Sign in</title>
         <%@include file ="header.jsp"%>
-        <link href="style/formstyle.css" rel="stylesheet" type="text/css"/>
+        <link href="style/signin.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> 
-        <h1>Welcome!</h1>
+    <div id="loginForm">
+        <table>
+            <thead>
+                <tr><td><h1>Welcome!</h1>
+            <span class="badge bg-dark">Please login below</span>
+                    </td></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td><input class="form-control" type="text" name="username" size="40" required/></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input class="form-control" type="password" name="password" size="40" required/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href=""><span class="badge bg-primary">Forgot password?</span></a>
+                    </td>
+                    <td>
+                        <button id="submitBtn" class="btn btn-success" name="submit">Submit</button>
+                    </td>
+                </tr>
+            </tbody>
+       </table>
+    </div>
     </body>
-</html> 
-<tr>
-    <td>Please Login Below:</td>
-<br><br/>
-</tr>
-<tbody>
-    <tr>
-<br> <td>Username</td> <br/>
-<td><input type="text" name="first" size="40" required/></td>
-</tr>
-<tr>
-<br>
-<br><td>Password</td><br/>
-<td><input type="text" name="last" size="40" required/></td>
-</tr>
-<br>
-<br/>
-<br>
-<form name="Login" action="loginAction.jsp">
-    <table border="0">
-        <tbody></tbody>
-        <br>
-        </select>
-        <br/>
-        <br/>
-        <br> <input type="submit" value="Submit" name="submit" /><br/>
-        To complete registration as a learner, Please fill out this <a href="indexPay.jsp"> Payment Form</a>
-
-        </tr>
-        </br>
+</html>
