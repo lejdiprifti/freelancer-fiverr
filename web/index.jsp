@@ -9,14 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Home</title>
      <%@include file ="header.jsp"%>
     <link href="style/newcss.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
-    <h1>Welcome to <strong>Freelance Pro!</strong> The first of its kind, all in one collaborative learning platform. 
-        </h1>
+    <div class="main">
+    <div><h1>Welcome to <strong>Freelance Pro!</strong></h1>
+    <span class="badge bg-primary">The first of its kind, all in one collaborative learning platform.</span>
+    </div>
+    <img src="pic/freelance logo.PNG" />
+    </div>
 
     
 
