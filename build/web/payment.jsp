@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Payment - Freelance Pro</title>
    <%@include file ="header.jsp"%>
    <link href="style/payment.css" rel="stylesheet" type="text/css"/>
+   <script src="js/payment.js" type="text/javascript"></script>
     </head>
     <body>
     <div id="main">
@@ -23,56 +24,46 @@
 <tbody>
     <tr>
                             <td>First Name</td>
-                            <td><input class="form-control" type="text" name="first" size="40" required/></td>
+                            <td><input id="first" class="form-control" type="text" name="first" size="40" required/></td></tr>
                         <tr>
                             <td>Last Name</td>
-                            <td><input class="form-control" type="text" name="last" size="40" required/></td>
+                            <td><input id="last" class="form-control" type="text" name="last" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td><input class="form-control" type="text" name="email" size="40" required/></td>
+                            <td><input id="email" class="form-control" type="email" name="email" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Street Address</td>
-                            <td><input class="form-control" type="text" name="street" size="40" required/></td>
+                            <td><input id="street" class="form-control" type="text" name="street" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>City</td>
-                            <td><input class="form-control" type="text" name="city" size="40" required/></td>
+                            <td><input id="city" class="form-control" type="text" name="city" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>State</td>
-                            <td><input class="form-control" type="text" name="state" size="40" required/></td>
+                            <td><input id="state" class="form-control" type="text" name="state" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Zip Code</td>
-                            <td><input class="form-control" type="text" name="zip" size="10" required/></td>
+                            <td><input id="zip" class="form-control" type="text" name="zip" size="10" required/></td>
                         </tr>
                         <tr>
-                            <td>Credit Card Number</td>
-                            <td><input class="form-control" type="password" name="card" size="16" required/></td>
-                        </tr>
-                        <tr>
-                            <td>Expiration Date (xx/xxxx) </td>
-                            <td><input class="form-control" type="text" name="exp" size="7" required/></td>
-                        </tr>
-                        <tr>
-                            <td>CVC</td>
-                            <td><input class="form-control" type="text" name="cvc" size="3" required/></td>
+                            <td>Type of payment</td>
+                            <td>
+                                 <select class="form-select" id="paymentType">
+                                        <option value="creditCard">Credit Card</option>
+                                        <option value="bank">Bank Transaction</option>
+                                 </select>
+                            </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td> <button type="button" class="btn btn-success" onclick="validateForm()">Submit</button></td>
+                            <td> <button type="button" class="btn btn-primary" onclick="submit()">Next</button></td>
         </tr>
    </tbody>
 </table>
     </div>
-<form name="Pay" action="payAction.jsp">
-    <table border="0">
-        <tbody>
-            </td>
-            </tr>
-        </tbody>
-    </table>
 </body>
 </html>

@@ -26,15 +26,15 @@
                     <tbody>
                         <tr>
                             <td>First Name</td>
-                            <td><input type="text" class="form-control" name="first" size="40" required/></td>
+                            <td><input id="first" type="text" class="form-control" name="first" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Last Name</td>
-                            <td><input type="text"  class="form-control" name="last" size="40" required/></td>
+                            <td><input id="last" type="text"  class="form-control" name="last" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Username</td>
-                            <td><input type="text" class="form-control" name="user" size="40" required/></td>
+                            <td><input id="username" type="text" class="form-control" name="user" size="40" required/></td>
                         </tr>
                         <tr>
                             <td>Password</td>
@@ -61,7 +61,7 @@
                                         <option>What's your pet's name?</option>
                                         <option>Where did your parents meet?</option>
                                 </select>
-                                <input id="securityAnswer" type="text" class="form-control"/>
+                                <input id="securityAnswer" type="text" name="securityAnswer" size="40" class="form-control"/>
                             </td>
                         </tr>
                     </tbody>   

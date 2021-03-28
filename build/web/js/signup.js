@@ -4,17 +4,77 @@
  * and open the template in the editor.
  */
 
+function validateForm() {
+    var message = null;
+    var firstName = document.getElementById("first").value;
+    if (firstName.trim() === "") {
+        message = "Please fill in the firstname.";
+        document.getElementById("first").setCustomValidity(message);
+        alert(message);
+        return false;
+    } else {
+        document.getElementById("first").setCustomValidity("");
+    }
+    var lastName = document.getElementById("last").value;
+    if (lastName.trim() === "") {
+        message = "Please fill in the lastname.";
+        document.getElementById("last").setCustomValidity(message);
+        alert(message);
+        return false;
+    }  else {
+        document.getElementById("last").setCustomValidity("");
+    }
+    var username = document.getElementById("username").value;
+    if (username.trim() === "") {
+        message = "Please fill in the username.";
+        document.getElementById("username").setCustomValidity(message);
+        alert(message);
+        return false;
+    } else {
+        document.getElementById("username").setCustomValidity("");
+    }
+    
+    var pwd = document.getElementById("pwd").value;
+    if (pwd.trim() === "") {
+        message = "Please fill in the password.";
+        document.getElementById("pwd").setCustomValidity(message);
+        alert(message);
+        return false;
+    }else {
+        document.getElementById("pwd").setCustomValidity("");
+    }
+    var cpwd = document.getElementById("cpwd").value;
+    if (cpwd.trim() === ""){
+        message = "Please fill in the confirm password.";
+        document.getElmentById("cpwd").setCustomValidity(message);
+        alert(message);
+        return false;
+    }else {
+        document.getElementById("cpwd").setCustomValidity("");
+    }
+    var securityAnswer = document.getElementById("securityAnswer").value;
+    if (securityAnswer.trim() === "") {
+        message = "Please fill in the security answer.";
+        document.getElementById("securityAnswer").setCustomValidity(message);
+        alert(message);
+        return false;
+    }else {
+        document.getElementById("securityAnswer").setCustomValidity("");
+    }
+    return true;
+}
 
 function passvalid() {
    var pwd = document.getElementById("pwd").value;
   var cpwd = document.getElementById("cpwd").value;
   if (pwd !== cpwd){
+       alert("Passwords do not match.");
     document.getElementById("cpwd").setCustomValidity("Passwords do not match");
     return false;
   } else {
     document.getElementById("cpwd").setCustomValidity("");
   }
-      return true;
+  return true;
 }
 
 function redirectToPayment() {
@@ -27,7 +87,7 @@ function redirectToPayment() {
 }
 
 function submit() {
-    if (passvalid() === true) {
+    if (validateForm() === true && passvalid() === true) {
         redirectToPayment();
     }
 }
