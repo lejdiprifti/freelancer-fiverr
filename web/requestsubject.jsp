@@ -11,30 +11,30 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     <%@include file ="header.jsp"%>
-    <link href="style/formstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="style/requestsubject.css" rel="stylesheet" type="text/css"/>
     <script src="request.js" type="text/javascript"></script>
     </head>
     <body>
-      
-         <h1> You can request any subject right here!! </h1>
+        <div id="main">
+         <h3 id="title">You can request any subject right here.</h3>
          <form id="request" action="requestaction.jsp">
-        <table border="2" cellspacing="5" cellpadding="5">
+            <table>
             <tbody>
                 <tr>
-                    <td> enter your new request  </td>
-                    <td><input id="subrequest" type="text" name="subrequest" size="300" required/></td>
+                    <td class="text">Enter your new request  </td>
+                    <td><input class="form-control" id="subrequest" type="text" name="subrequest" size="300" required/></td>
                 </tr>
                 <tr>
-                    <td> comment </td>
-                    <td><input id="comment" type="text" name="comment"  size="300"/></td>
+                    <td class="text"> Comment </td>
+                    <td><input  class="form-control" id="comment" type="text" name="comment"  size="300"/></td>
                 </tr>
-                
-
-            <td> <input type="button" value="Submit" onclick="validateForm()" /></td> &nbsp;&nbsp
-            <td> <input type="reset" value="Reset" /> </td>
-        </tr>
-    </tbody>
-</table>
+                <tr>
+                    <td> <input id="submitBtn" class="btn btn-success" type="button" value="Submit" onclick="validateForm()" /></td>
+                    <td> <input id="resetBtn" class="btn btn-light" type="reset" value="Reset" /> </td>
+                </tr>
+            </tbody>
+            </table>
          </form>
+        </div>
     </body>
 </html>
