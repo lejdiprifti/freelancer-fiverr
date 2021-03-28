@@ -12,6 +12,7 @@
         <title>Credit Card Payment - Freelance Pro</title>
         <%@include file ="header.jsp"%>
         <link href="style/creditcard.css" rel="stylesheet" type="text/css"/>
+        <script src="js/creditcard.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="main" class="card">
