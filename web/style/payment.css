@@ -18,3 +18,8 @@ div#main {
 #main table, #title {
     margin: 2% auto;
 }
+
+button {
+    margin-top: 5%;
+    float: right;
+}
