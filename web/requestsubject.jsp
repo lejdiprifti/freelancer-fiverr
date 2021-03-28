@@ -12,12 +12,11 @@
         <title>JSP Page</title>
     <%@include file ="header.jsp"%>
     <link href="style/requestsubject.css" rel="stylesheet" type="text/css"/>
-    <script src="request.js" type="text/javascript"></script>
+    <script src="js/requestsubject.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="main">
          <h3 id="title">You can request any subject right here.</h3>
-         <form id="request" action="requestaction.jsp">
             <table>
             <tbody>
                 <tr>
@@ -29,12 +28,11 @@
                     <td><input  class="form-control" id="comment" type="text" name="comment"  size="300"/></td>
                 </tr>
                 <tr>
-                    <td> <input id="submitBtn" class="btn btn-success" type="button" value="Submit" onclick="validateForm()" /></td>
-                    <td> <input id="resetBtn" class="btn btn-light" type="reset" value="Reset" /> </td>
+                    <td> <input id="submitBtn" class="btn btn-success" type="button" value="Submit" onclick="submit()" /></td>
+                    <td> <input id="resetBtn" class="btn btn-light" type="button" onclick="reset()" value="Reset" /> </td>
                 </tr>
             </tbody>
             </table>
-         </form>
         </div>
     </body>
 </html>
