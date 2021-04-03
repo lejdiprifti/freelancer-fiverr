@@ -3,7 +3,7 @@
     Created on : Mar 22, 2021, 7:49:42 PM
     Author     : nrusso
 --%>
-
+<%@page import="myBeans.DBConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@include file ="header.jsp"%>
         <link href="style/formstyle.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="js/signup.js" type="text/javascript"></script>
+    </head>
         <title>Sign up - Freelance Pro</title>
     </head>
     <body>
@@ -49,24 +51,24 @@
                                  Select a User Type:
                             </td>
                             <td>
-                                    <select class="form-select" id="userType">
-                                        <option>learner</option>
-                                        <option>expert</option>
+                                    <select class="form-select" name="userType" id="userType">
+                                        <option value="1">learner</option>
+                                        <option value="2">expert</option>
                                     </select>
                             </td>
                         </tr>
                         <tr id="securityRow">
                             <td>Select a security question:</td>
-                            <td><select class="form-select" id="securityQuestion">
-                                        <option>What's your pet's name?</option>
-                                        <option>Where did your parents meet?</option>
+                            <td><select class="form-select" name="securityQuestion" id="securityQuestion">
+                                        <option value="1">What's your pet's name?</option>
+                                        <option value="2">Where did your parents meet?</option>
                                 </select>
                                 <input id="securityAnswer" type="text" name="securityAnswer" size="40" class="form-control"/>
                             </td>
                         </tr>
                     </tbody>   
                 </table>
-                <button type="button" class="btn btn-success" onclick="submit()">Submit</button>
+                <button type="button" class="btn btn-success" id="submitBtn" onclick="submit()">Submit</button>
 </div>
     </body>
 </html>
