@@ -5,22 +5,36 @@
  */
 
 function submit() {
-    if (validateForm() === true && validateAccountNumber() === true){
-        location.href = "thankyou.jsp";
-    } 
+    if (validateForm() === true && validateAccountNumber() === true) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        $.ajax({
+            type: "post",
+            url: "/freelancer/bank",
+            data: "paymentId=" + id.trim() + "&accountNumber=" + $('#account').val() + "&routingNumber=" + $('#routing').val() + "&accountType=" + $("#accountType").val(),
+            success: function (msg) {
+                location.href = "thankyou.jsp";
+            },
+            error: function (xhr) {
+                if (xhr.status === 403) {
+                    alert("Payment was not processed successfully!");
+                }
+            }
+        });
+    }
 }
 
 function validateAccountNumber() {
     var account = document.getElementById("account").value;
-  var caccount = document.getElementById("caccount").value;
-  if (account !== caccount){
-      alert("Account numbers do not match.");
-    document.getElementById("caccount").setCustomValidity("Account numbers do not match");
-    return false;
-  } else {
-    document.getElementById("caccount").setCustomValidity("");
-  }
-  return true;
+    var caccount = document.getElementById("caccount").value;
+    if (account !== caccount) {
+        alert("Account numbers do not match.");
+        document.getElementById("caccount").setCustomValidity("Account numbers do not match");
+        return false;
+    } else {
+        document.getElementById("caccount").setCustomValidity("");
+    }
+    return true;
 }
 
 
@@ -35,7 +49,7 @@ function validateForm() {
     } else {
         document.getElementById("routing").setCustomValidity("");
     }
-    
+
     var account = document.getElementById("account").value;
     if (account === "") {
         message = "Please fill in the account number.";
@@ -45,7 +59,7 @@ function validateForm() {
     } else {
         document.getElementById("account").setCustomValidity("");
     }
-    
+
     var caccount = document.getElementById("caccount").value;
     if (caccount === "") {
         message = "Please fill in the confirm account number.";
@@ -55,6 +69,6 @@ function validateForm() {
     } else {
         document.getElementById("caccount").setCustomValidity("");
     }
-    
+
     return true;
 }

@@ -5,13 +5,27 @@
  */
 
 function submit() {
-    var paymentType = document.getElementById("paymentType").value;
     if (validateForm() === true) {
-        if (paymentType === "creditCard") {
-            location.href = "creditcard.jsp";
-    } else if (paymentType === "bank") {
-        location.href = "bank.jsp";
-    }
+       $.ajax({
+            type: "post",
+            url: "/freelancer/payment",
+            data: "first=" + $('#first').val() + "&last=" + $('#last').val() +"&zip=" + $("#zip").val() + "&state=" + $("#state").val() + "&email=" + $("#email").val() + "&city=" + $("#city").val() + "&paymentType=" + $("#paymentType").val(),
+            success: function (msg) {
+                    switch (msg.payment_type) {
+                        case "1":
+                            location.href = "creditcard.jsp?id=" + msg.payment_id;
+                            break;
+                        case "2":
+                            location.href = "bank.jsp?id=" + msg.payment_id;
+                            break;
+                    }
+            },
+            error: function (xhr) {
+                if (xhr.status === 403) {
+                    alert("Payment was not processed successfully!");
+                }
+            }
+        });
     }
 }
 

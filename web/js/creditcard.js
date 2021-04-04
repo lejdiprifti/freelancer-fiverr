@@ -6,7 +6,21 @@
 
 function submit() {
     if (validateForm() === true){
-        location.href = "thankyou.jsp";
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        $.ajax({
+            type: "post",
+            url: "/freelancer/creditcard",
+            data: "paymentId=" + id.trim() + "&creditCardNumber=" + $('#card').val() + "&exp=" + $('#exp').val() +"&cvc=" + $("#cvc").val(),
+            success: function (msg) {
+                location.href = "thankyou.jsp";
+            },
+            error: function (xhr) {
+                if (xhr.status === 403) {
+                    alert("Payment was not processed successfully!");
+                }
+            }
+        });
     } 
 }
 

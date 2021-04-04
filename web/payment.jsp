@@ -12,6 +12,7 @@
         <title>Payment - Freelance Pro</title>
    <%@include file ="header.jsp"%>
    <link href="style/payment.css" rel="stylesheet" type="text/css"/>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
    <script src="js/payment.js" type="text/javascript"></script>
     </head>
     <body>
@@ -53,8 +54,8 @@
                             <td>Type of payment</td>
                             <td>
                                  <select class="form-select" id="paymentType">
-                                        <option value="creditCard">Credit Card</option>
-                                        <option value="bank">Bank Transaction</option>
+                                        <option value="1">Credit Card</option>
+                                        <option value="2">Bank Transaction</option>
                                  </select>
                             </td>
                         </tr>
