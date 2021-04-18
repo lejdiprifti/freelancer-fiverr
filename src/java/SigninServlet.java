@@ -34,6 +34,12 @@ public class SigninServlet extends HttpServlet {
 
             ResultSet rs = dbConnect.validatePwd(sql);
             if (rs.next()) {
+                int userType = rs.getInt(6);
+                if (userType == 3) {
+                    response.getWriter().write("ADMIN");
+                } else {
+                    response.getWriter().write("USER");
+                }
                 response.setStatus(200);
             } else {
                 throw new SQLException("Password is not correct.");

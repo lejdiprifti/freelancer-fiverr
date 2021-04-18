@@ -34,8 +34,12 @@ function submit() {
             type: "post",
             url: "/freelancer/signin",
             data: "user=" + $('#username').val() + "&pwd=" + $('#pwd').val(),
-            success: function () {
+            success: function (msg) {
+                if (msg == "ADMIN") {
+                    location.href = "admin.jsp"
+                } else if (msg == "USER") {
                     location.href = "index.jsp";
+                }
             },
             error: function (xhr) {
                 if (xhr.status === 403) {

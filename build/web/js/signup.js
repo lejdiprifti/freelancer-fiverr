@@ -40,6 +40,16 @@ function validateForm() {
         document.getElementById("pwd").setCustomValidity(message);
         alert(message);
         return false;
+    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(pwd.trim())) {
+        message ="Your password must be more secure!";
+        alert(message);
+        document.getElementById("pwd").setCustomValidity(message);
+        return false;
+    } else if (pwd.trim() === username) {
+        message ="Your password must not be the same as username!";
+        alert(message);
+        document.getElementById("pwd").setCustomValidity(message);
+        return false;
     } else {
         document.getElementById("pwd").setCustomValidity("");
     }
@@ -83,11 +93,11 @@ function submit() {
             type: "post",
             url: "/freelancer/signup",
             data: "first=" + $('#first').val() + "&last=" + $('#last').val() + "&user=" + $('#username').val() + "&pwd=" + $('#pwd').val() + "&userType=" + $('#userType').val() + "&securityQuestion=" + $('#securityQuestion').val() + "&securityAnswer=" + $('#securityAnswer').val(),
-            success: function () {
+            success: function (msg) {
                 var userType = document.getElementById("userType").value;
-                if (userType === "learner") {
+                if (userType === "1") {
                     location.href = "payment.jsp";
-                } else if (userType === "expert") {
+                } else if (userType === "2") {
                     location.href = "index.jsp";
                 }
             },
