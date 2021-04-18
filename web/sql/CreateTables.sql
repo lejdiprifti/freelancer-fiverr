@@ -126,5 +126,11 @@ INSERT INTO freelancer.user_type
 VALUES('expert');
 
 
+INSERT INTO freelancer.user_type
+(user_type_id, user_type_name)
+VALUES(3, 'biller');
 
+INSERT INTO freelancer.users
+(firstname, lastname, username, password, user_type_id, security_question_id, security_answer)
+VALUES('ADMIN', 'ADMIN', 'admin', 'Admin2021', 3, 1, 'ANSWER');
 
